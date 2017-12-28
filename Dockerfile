@@ -23,7 +23,7 @@ ADD . /project
 
 RUN ls -la /project
 
-RUN cd /project && npm install
+RUN cd /project && npm install && npm run build
 
 EXPOSE  8080
 CMD ["node", "/project/dist/server.js"]
