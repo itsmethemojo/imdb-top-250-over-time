@@ -1,4 +1,1 @@
-Vagrantfile
-.vagrant
-dist
-node_modules
+download*

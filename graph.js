@@ -2,22 +2,22 @@ var runner = function() {
 
   'use strict';
 
-  $.getJSON('/imdb-top-250-data', function(data) {
+  $.getJSON('/data/top-250-movies.json', function(data) {
     var lowestYear = 40000;
     var highestYear = 0;
+    
     $.each(data, function(key, val) {
-      if (val.year > highestYear) {
-        highestYear = val.year;
+      if (val.startYear > highestYear) {
+        highestYear = val.startYear;
       }
-      if (val.year < lowestYear) {
-        lowestYear = val.year;
+      if (val.startYear < lowestYear) {
+        lowestYear = val.startYear;
       }
     });
 
     var years = {};
     var yearDetails = {};
 
-    console.log(years.length);
     for (var i = lowestYear; i <= highestYear; i++) {
       years[i] = 0;
       yearDetails[i] = "";
@@ -25,14 +25,14 @@ var runner = function() {
     }
 
     $.each(data, function(key, val) {
-      years[val.year] = years[val.year] + 1;
-      yearDetails[val.year] = yearDetails[val.year]
-                              + '<p><a href="http://www.imdb.com'
-                              + val.link
-                              + '">('
-                              + val.rating
-                              + ')'
-                              + val.title
+      years[val.startYear] = years[val.startYear] + 1;
+      yearDetails[val.startYear] = yearDetails[val.startYear]
+                              + '<p><a target="blank" href="http://www.imdb.com/de/title/'
+                              + val.id
+                              + '/">('
+                              + val.rating.aggregateRating
+                              + ') '
+                              + val.primaryTitle
                               + '</a></p>'
     });
 
@@ -53,7 +53,7 @@ var runner = function() {
 
       yAxis: {
           title: {
-              text: 'Number of Top Movies'
+              text: 'Number of Top 250 Movies per Year'
             }
         },
       legend: {
