@@ -7,7 +7,7 @@ to prove https://github.com/nufuk wrong that there are no good movies anymore :)
 
 # preview
 
-see the [github page]() for visualization
+see the [https://itsmethemojo.github.io/imdb-top-250-over-time/](https://itsmethemojo.github.io/imdb-top-250-over-time/) for visualization
 
 # static data
 

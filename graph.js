@@ -2,7 +2,7 @@ var runner = function() {
 
   'use strict';
 
-  $.getJSON('/data/top-250-movies.json', function(data) {
+  $.getJSON('data/top-250-movies.json', function(data) {
     var lowestYear = 40000;
     var highestYear = 0;
     
