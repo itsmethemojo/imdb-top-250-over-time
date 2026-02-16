@@ -15,7 +15,7 @@ since those ratings are pretty stable it does make no sense for now to fetch the
 
 i used [https://imdbapi.dev/](https://imdbapi.dev/) to retreived the data and choose only movies with more then 100000 votes
 
-see [scripts\download-data.sh](scripts\download-data.sh) how the data was fetched
+see [scripts/download-data.sh](scripts/download-data.sh) how the data was fetched
 
 # test locally
 

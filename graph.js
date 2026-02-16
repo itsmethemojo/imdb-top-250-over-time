@@ -48,7 +48,7 @@ var runner = function() {
         },
 
       title: {
-          text: 'Movies per year from the IMDB Top 250'
+          text: 'Movies per year from the IMDB Top 250<br/><href="https://github.com/itsmethemojo/imdb-top-250-over-time">[see on Github]</a>'
         },
 
       yAxis: {
