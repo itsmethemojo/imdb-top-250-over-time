@@ -43,7 +43,7 @@ var runner = function() {
 
     Highcharts.chart('container', {
       chart: {
-          type: 'line'
+          type: 'column'
 
         },
 
