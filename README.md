@@ -21,6 +21,8 @@ see [scripts/download-data.sh](scripts/download-data.sh) how the data was fetche
 
 `docker run --rm --name nginx-demo -p8080:80 -v $(pwd):/usr/share/nginx/html nginx`
 
+[open in browser http://localhost:8080](http://localhost:8080)
+
 # TODOs
 
 * do not store static javascript libs in this repo, fetch as build process
